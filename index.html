@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Einfach So Pilsbar Nürnberg – Drinks, gute Musik, Karaoke-Abende und gemütliche Bar-Atmosphäre in der Wodanstraße 26.">
+<title>Einfach So Pilsbar Nürnberg</title>
+<style>
+:root{
+  --bg:#08090c;--panel:#11131a;--gold:#f7c94a;--pink:#ff4f9a;--cyan:#58e5ff;
+  --text:#f7f7f7;--muted:#b7bac4;--line:rgba(255,255,255,.12);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;z-index:10;top:0;left:0;right:0;background:rgba(8,9,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navin{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold)}
+.links{display:flex;gap:20px;font-size:14px}.links a:hover{color:var(--gold)}
+.hero{min-height:92vh;display:grid;place-items:center;text-align:center;padding:120px 20px 70px;
+background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(8,9,12,.96)),url("assets/bar-flyer.png") center/cover fixed}
+.hero-card{max-width:850px}
+.kicker{color:var(--gold);font-weight:800;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(52px,10vw,110px);line-height:.9;margin:18px 0;font-weight:950;text-shadow:0 0 35px rgba(247,201,74,.25)}
+h1 em{font-style:normal;color:var(--pink)}
+.hero p{font-size:clamp(18px,2.5vw,25px);color:#e8e8ea;max-width:700px;margin:0 auto 30px}
+.btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 20px;border-radius:999px;font-weight:800;border:1px solid var(--line);background:#151821}
+.btn.primary{background:var(--gold);color:#111;border-color:var(--gold)}
+section{max-width:1150px;margin:auto;padding:80px 20px}
+.title{font-size:clamp(32px,5vw,54px);margin:0 0 12px}.sub{color:var(--muted);max-width:700px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{background:linear-gradient(145deg,#151821,#0d0f14);border:1px solid var(--line);border-radius:22px;padding:24px}
+.card h3{margin:0 0 8px;color:var(--gold)}.card p{color:var(--muted);line-height:1.65}
+.event{border:1px solid rgba(255,79,154,.45);background:linear-gradient(135deg,rgba(255,79,154,.12),rgba(88,229,255,.06));border-radius:28px;padding:28px;margin-top:30px}
+.event strong{color:var(--pink)}
+.menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.menu-card{background:#101218;border:1px solid var(--line);border-radius:22px;padding:24px}
+.menu-card h3{margin-top:0;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:12px}
+.item{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.item:last-child{border-bottom:0}.price{font-weight:800;white-space:nowrap}
+.gallery{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:30px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px;border:1px solid var(--line);display:block}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact a{color:var(--gold);font-weight:800}
+footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;color:var(--muted)}
+.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:rgba(88,229,255,.1);color:var(--cyan);font-size:13px;font-weight:800}
+@media(max-width:800px){.links{display:none}.grid,.menu-wrap,.gallery,.contact{grid-template-columns:1fr}.hero{min-height:85vh;background-attachment:scroll}}
+</style>
+</head>
+<body>
+<nav><div class="navin">
+  <a class="logo" href="#">Einfach <span>So</span> Pilsbar</a>
+  <div class="links"><a href="#bar">Bar</a><a href="#events">Events</a><a href="#drinks">Getränke</a><a href="#kontakt">Kontakt</a></div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-card">
+    <div class="kicker">Nürnberg · Wodanstraße 26</div>
+    <h1>Einfach <em>So</em><br>PILSBAR</h1>
+    <p>Gute Getränke. Gute Musik. Gute Zeit. Einfach vorbeikommen, Platz nehmen und den Abend genießen.</p>
+    <div class="btns">
+      <a class="btn primary" href="#drinks">Getränkekarte</a>
+      <a class="btn" href="#kontakt">Kontakt & Anfahrt</a>
+    </div>
+  </div>
+</header>
+
+<section id="bar">
+  <div class="kicker">Deine Bar. Dein Moment.</div>
+  <h2 class="title">Einfach So in Nürnberg</h2>
+  <p class="sub">Eine gemütliche Pilsbar in der Wodanstraße – mit großer Getränkeauswahl, Musik, gelegentlichen Karaoke-Abenden und einer lockeren Atmosphäre. Bei uns geht es nicht kompliziert zu: reinkommen, Freunde treffen und einfach eine gute Zeit haben.</p>
+  <div class="grid">
+    <div class="card"><h3>🍺 Drinks</h3><p>Bier vom Fass, Flaschenbiere, Aperitifs, Longdrinks, Cocktails, Wein und alkoholfreie Getränke.</p></div>
+    <div class="card"><h3>🎤 Karaoke</h3><p>Gelegentliche Karaoke-Abende – etwa ein- bis zweimal im Monat. Die aktuellen Termine findest du bei unseren Events.</p></div>
+    <div class="card"><h3>🎶 Musik & Atmosphäre</h3><p>Locker, unkompliziert und gesellig. Genau der richtige Ort für einen entspannten Abend mit Freunden.</p></div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="kicker">Was geht?</div>
+  <h2 class="title">Events</h2>
+  <p class="sub">Hier erscheinen die nächsten besonderen Abende der Einfach So Pilsbar.</p>
+  <div class="event">
+    <span class="badge">Nächster Termin</span>
+    <h3 style="font-size:30px;margin:16px 0 6px">🎤 Karaoke-Abend</h3>
+    <p style="font-size:18px;margin:0;color:#eee"><strong>Samstag, 26.09.2026 · ab 17:00 Uhr</strong></p>
+    <p style="color:var(--muted);line-height:1.6">Schnapp dir deine Freunde, such dir deinen Song aus und sing einfach drauflos.</p>
+  </div>
+</section>
+
+<section id="drinks">
+  <div class="kicker">Gute Getränke</div>
+  <h2 class="title">Unsere Auswahl</h2>
+  <p class="sub">Ein Auszug aus der Getränkekarte. Die vollständige Karte liegt bei uns vor Ort aus.</p>
+  <div class="menu-wrap">
+    <div class="menu-card"><h3>🍺 Bier</h3>
+      <div class="item"><span>Becks 0,33 l</span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Becks Alkoholfrei</span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Corona Extra 0,33 l</span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Helles vom Fass 0,5 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Rotbier 0,5 l</span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Gutmann Weizen Hell 0,5 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Gutmann Weizen Dunkel 0,5 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Zirndorfer Landbier 0,5 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Zirndorfer Kellerbier 0,5 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Desperados 0,33 l</span><span class="price">4,50 €</span></div>
+    </div>
+    <div class="menu-card"><h3>🥤 Alkoholfrei</h3>
+      <div class="item"><span>Mineralwasser spritzig</span><span class="price">ab 2,50 €</span></div>
+      <div class="item"><span>Mineralwasser still</span><span class="price">ab 2,50 €</span></div>
+      <div class="item"><span>Coca-Cola 0,33 l</span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Cola Light 0,33 l</span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Cola Zero 0,33 l</span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Spezi 0,33 l</span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Zitronenlimonade</span><span class="price">ab 2,80 €</span></div>
+      <div class="item"><span>Apfel-Schorle</span><span class="price">ab 2,80 €</span></div>
+      <div class="item"><span>Orangen-/Apfelsaft</span><span class="price">ab 2,80 €</span></div>
+      <div class="item"><span>Red Bull Energy 0,25 l</span><span class="price">4,00 €</span></div>
+    </div>
+    <div class="menu-card"><h3>🍹 Cocktails & Longdrinks</h3>
+      <div class="item"><span>Cocktails</span><span class="price">8,50 €</span></div>
+      <div class="item"><span>Longdrinks</span><span class="price">7,50 €</span></div>
+      <div class="item"><span>Longdrinks mit Energy</span><span class="price">8,50 €</span></div>
+      <div class="item"><span>Aperol Spritz 0,4 l</span><span class="price">6,00 €</span></div>
+      <div class="item"><span>Campari Spritz</span><span class="price">7,00 €</span></div>
+    </div>
+    <div class="menu-card"><h3>🍷 Wein & Spirituosen</h3>
+      <div class="item"><span>Weinschorle 0,2 l</span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Weinschorle 0,4 l</span><span class="price">4,50 €</span></div>
+      <div class="item"><span>Havanna Club 2 cl</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Bacardi 2 cl</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Wodka / Klare 2 cl</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Asbach Uralt 2 cl</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Chantré 2 cl</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Jack Daniel's / Jim Beam 2 cl</span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Johnnie Walker Red Label 2 cl</span><span class="price">4,50 €</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Einblicke</div>
+  <h2 class="title">Einfach So</h2>
+  <div class="gallery">
+    <img src="assets/bar-flyer.png" alt="Einfach So Pilsbar – Werbemotiv">
+    <img src="assets/getraenkekarte.png" alt="Getränkekarte der Einfach So Pilsbar">
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="kicker">Komm vorbei</div>
+  <h2 class="title">Kontakt & Öffnungszeiten</h2>
+  <div class="contact" style="margin-top:30px">
+    <div class="card">
+      <h3>📍 Adresse</h3>
+      <p>Wodanstraße 26<br>90461 Nürnberg</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Wodanstraße%2026%2090461%20Nürnberg" target="_blank">Route auf Google Maps →</a></p>
+      <h3 style="margin-top:25px">📞 Kontakt</h3>
+      <p>Inhaber: Martin Urban<br><a href="tel:+491748972846">+49 174 8972846</a></p>
+    </div>
+    <div class="card">
+      <h3>🕒 Öffnungszeiten</h3>
+      <p><strong>Montag – Mittwoch</strong><br>14:00 – 02:00 Uhr</p>
+      <p><strong>Donnerstag – Samstag</strong><br>14:00 – 05:00 Uhr</p>
+      <p><strong>Sonntag</strong><br>14:00 – 02:00 Uhr</p>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Einfach So Pilsbar Nürnberg · Wodanstraße 26 · 90461 Nürnberg</footer>
+</body>
+</html>
