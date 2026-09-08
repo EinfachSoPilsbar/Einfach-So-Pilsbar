@@ -6,46 +6,45 @@
 <meta name="description" content="Einfach So Pilsbar Nürnberg – Drinks, gute Musik, Karaoke-Abende und gemütliche Bar-Atmosphäre in der Wodanstraße 26.">
 <title>Einfach So Pilsbar Nürnberg</title>
 <style>
-:root{
-  --bg:#08090c;--panel:#11131a;--gold:#f7c94a;--pink:#ff4f9a;--cyan:#58e5ff;
-  --text:#f7f7f7;--muted:#b7bac4;--line:rgba(255,255,255,.12);
-}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600;700&display=swap');
+:root{--bg:#050509;--panel:#0d0d15;--pink:#ff1597;--cyan:#00d9ff;--yellow:#ffc21a;--white:#fff;--muted:#c8c8d2;--line:rgba(255,255,255,.12)}
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:radial-gradient(circle at 20% 10%,rgba(255,21,151,.08),transparent 30%),radial-gradient(circle at 85% 20%,rgba(0,217,255,.08),transparent 30%),var(--bg);color:var(--white);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 a{color:inherit;text-decoration:none}
-nav{position:fixed;z-index:10;top:0;left:0;right:0;background:rgba(8,9,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navin{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--gold)}
-.links{display:flex;gap:20px;font-size:14px}.links a:hover{color:var(--gold)}
-.hero{min-height:92vh;display:grid;place-items:center;text-align:center;padding:120px 20px 70px;
-background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(8,9,12,.96)),url("assets/bar-flyer.png") center/cover fixed}
-.hero-card{max-width:850px}
-.kicker{color:var(--gold);font-weight:800;letter-spacing:3px;text-transform:uppercase}
-h1{font-size:clamp(52px,10vw,110px);line-height:.9;margin:18px 0;font-weight:950;text-shadow:0 0 35px rgba(247,201,74,.25)}
-h1 em{font-style:normal;color:var(--pink)}
-.hero p{font-size:clamp(18px,2.5vw,25px);color:#e8e8ea;max-width:700px;margin:0 auto 30px}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(5,5,9,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,21,151,.25)}
+.navin{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font-family:"Caveat",cursive;font-size:29px;font-weight:700;color:var(--yellow);text-shadow:0 0 14px rgba(255,194,26,.6)}
+.logo span{color:var(--pink)}
+.links{display:flex;gap:22px;font-weight:800;font-size:14px}.links a:hover{color:var(--cyan);text-shadow:0 0 12px rgba(0,217,255,.7)}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:105px 20px 60px;position:relative;overflow:hidden;background:linear-gradient(rgba(0,0,0,.34),rgba(5,5,9,.94)),url("assets/branding-poster.png") center 20%/cover}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent 0 30%,rgba(5,5,9,.62) 72%)}
+.hero-card{position:relative;z-index:1;max-width:850px}
+.hero-logo{width:min(420px,78vw);max-height:430px;object-fit:contain;filter:drop-shadow(0 0 24px rgba(255,21,151,.35));border-radius:50%}
+.kicker{color:var(--cyan);font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:14px;text-shadow:0 0 12px rgba(0,217,255,.65)}
+h1{font-family:Anton,sans-serif;font-size:clamp(42px,8vw,82px);letter-spacing:3px;line-height:.95;margin:15px 0 18px}
+.hero p{font-size:clamp(17px,2.4vw,23px);color:#eee;max-width:720px;margin:0 auto 28px;line-height:1.5}
 .btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn{padding:14px 20px;border-radius:999px;font-weight:800;border:1px solid var(--line);background:#151821}
-.btn.primary{background:var(--gold);color:#111;border-color:var(--gold)}
-section{max-width:1150px;margin:auto;padding:80px 20px}
-.title{font-size:clamp(32px,5vw,54px);margin:0 0 12px}.sub{color:var(--muted);max-width:700px;line-height:1.7}
+.btn{padding:14px 21px;border-radius:999px;font-weight:900;border:1px solid var(--pink);background:#11111a;box-shadow:0 0 16px rgba(255,21,151,.12)}
+.btn.primary{background:var(--pink);border-color:var(--pink);color:#fff;box-shadow:0 0 24px rgba(255,21,151,.5)}
+section{max-width:1200px;margin:auto;padding:85px 20px}
+.title{font-family:Anton,sans-serif;font-size:clamp(34px,5vw,58px);letter-spacing:2px;margin:0 0 12px}
+.sub{color:var(--muted);max-width:760px;line-height:1.7}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.card{background:linear-gradient(145deg,#151821,#0d0f14);border:1px solid var(--line);border-radius:22px;padding:24px}
-.card h3{margin:0 0 8px;color:var(--gold)}.card p{color:var(--muted);line-height:1.65}
-.event{border:1px solid rgba(255,79,154,.45);background:linear-gradient(135deg,rgba(255,79,154,.12),rgba(88,229,255,.06));border-radius:28px;padding:28px;margin-top:30px}
-.event strong{color:var(--pink)}
+.card{background:linear-gradient(145deg,#12121d,#09090f);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:inset 0 0 30px rgba(255,255,255,.015)}
+.card h3{margin:0 0 8px;color:var(--yellow);font-family:"Caveat",cursive;font-size:29px}.card p{color:var(--muted);line-height:1.65}
+.event{border:1px solid rgba(255,21,151,.6);background:linear-gradient(135deg,rgba(255,21,151,.14),rgba(0,217,255,.07));border-radius:28px;padding:28px;margin-top:30px;box-shadow:0 0 30px rgba(255,21,151,.08)}
+.event strong{color:var(--yellow)}
 .menu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
-.menu-card{background:#101218;border:1px solid var(--line);border-radius:22px;padding:24px}
-.menu-card h3{margin-top:0;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:12px}
-.item{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
-.item:last-child{border-bottom:0}.price{font-weight:800;white-space:nowrap}
-.gallery{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:30px}
-.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px;border:1px solid var(--line);display:block}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact a{color:var(--gold);font-weight:800}
+.menu-card{background:#0e0e17;border:1px solid var(--line);border-radius:22px;padding:24px}
+.menu-card h3{margin-top:0;color:var(--pink);font-family:"Caveat",cursive;font-size:31px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.item{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.08)}.item:last-child{border-bottom:0}.price{font-weight:900;color:var(--yellow);white-space:nowrap}.allergen{color:#aeb0bd;font-size:.72em;font-weight:700}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px;border:1px solid var(--line);display:block}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact a{color:var(--cyan);font-weight:900}
 footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;color:var(--muted)}
-.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:rgba(88,229,255,.1);color:var(--cyan);font-size:13px;font-weight:800}
-@media(max-width:800px){.links{display:none}.grid,.menu-wrap,.gallery,.contact{grid-template-columns:1fr}.hero{min-height:85vh;background-attachment:scroll}}
+@media(max-width:800px){.links{display:none}.grid,.menu-wrap,.gallery,.contact{grid-template-columns:1fr}.hero{min-height:92vh;background-position:center top}.hero-logo{width:min(350px,82vw)}}
+
+.menu-legend{margin:22px 0 8px;padding:16px 18px;border:1px solid rgba(0,217,255,.28);border-radius:16px;background:rgba(0,217,255,.05);color:#d9d9e2;font-size:12px;line-height:1.65}
+.menu-legend strong{color:var(--cyan)} .menu-legend small{color:#9999a8}
 </style>
 </head>
 <body>
@@ -56,6 +55,7 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
 
 <header class="hero">
   <div class="hero-card">
+    <img class="hero-logo" src="assets/logo.png" alt="Einfach So Pilsbar Nürnberg">
     <div class="kicker">Nürnberg · Wodanstraße 26</div>
     <h1>Einfach <em>So</em><br>PILSBAR</h1>
     <p>Gute Getränke. Gute Musik. Gute Zeit. Einfach vorbeikommen, Platz nehmen und den Abend genießen.</p>
@@ -91,50 +91,147 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
 
 <section id="drinks">
   <div class="kicker">Gute Getränke</div>
-  <h2 class="title">Unsere Auswahl</h2>
-  <p class="sub">Ein Auszug aus der Getränkekarte. Die vollständige Karte liegt bei uns vor Ort aus.</p>
+  <h2 class="title">Unsere Getränkekarte</h2>
+  <p class="sub">Eine Auswahl unserer aktuellen Getränke. Preise können sich bei Tages- oder Aktionsangeboten ändern.</p>
+  <div class="menu-legend">
+    <strong>Zusatzstoffe:</strong> 1 Farbstoff · 2 Konservierungsstoff · 3 Antioxidationsmittel ·
+    4 Geschmacksverstärker · 5 Schwefeldioxid/Sulfite · 6 geschwärzt · 7 Phosphat ·
+    8 Milcheiweiß · 9 koffeinhaltig · 10 chininhaltig · 11 Süßungsmittel · 12 enthält Phenylalanin
+    <br><strong>Allergene:</strong> A Gluten · C Eier · D Fisch · G Milch · H Schalenfrüchte ·
+    L Sellerie · M Senf · O Schwefeldioxid/Sulfite
+    <br><small>Die Kennzeichnung muss vor Veröffentlichung mit den tatsächlichen Hersteller-/Produktangaben und Rezepturen abgeglichen werden.</small>
+  </div>
+
+
   <div class="menu-wrap">
     <div class="menu-card"><h3>🍺 Bier</h3>
-      <div class="item"><span>Becks 0,33 l</span><span class="price">3,50 €</span></div>
-      <div class="item"><span>Becks Alkoholfrei</span><span class="price">3,50 €</span></div>
-      <div class="item"><span>Corona Extra 0,33 l</span><span class="price">3,00 €</span></div>
-      <div class="item"><span>Helles vom Fass 0,5 l</span><span class="price">3,80 €</span></div>
-      <div class="item"><span>Rotbier 0,5 l</span><span class="price">3,00 €</span></div>
-      <div class="item"><span>Gutmann Weizen Hell 0,5 l</span><span class="price">3,80 €</span></div>
-      <div class="item"><span>Gutmann Weizen Dunkel 0,5 l</span><span class="price">3,80 €</span></div>
-      <div class="item"><span>Zirndorfer Landbier 0,5 l</span><span class="price">3,80 €</span></div>
-      <div class="item"><span>Zirndorfer Kellerbier 0,5 l</span><span class="price">3,80 €</span></div>
-      <div class="item"><span>Desperados 0,33 l</span><span class="price">4,50 €</span></div>
+      <div class="item"><span>Rotherburger Landwehrbier 0,3 l <small class="allergen"> [A]</small></span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Rotherburger Landwehrbier 0,5 l <small class="allergen"> [A]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Radler 0,3 l <small class="allergen"> [A,1]</small></span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Radler 0,5 l <small class="allergen"> [A,1]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Maß Bier <small class="allergen"> [A]</small></span><span class="price">7,50 €</span></div>
+      <div class="item"><span>Maß Radler <small class="allergen"> [A,1]</small></span><span class="price">7,50 €</span></div>
+      <div class="item"><span>Dunkles Bier <small class="allergen"> [A]</small></span><span class="price">auf Anfrage</span></div>
+      <div class="item"><span>Zirndorfer Kellerbier <small class="allergen"> [A]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Zirndorfer Landbier <small class="allergen"> [A]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Gutmann Hefeweizen <small class="allergen"> [A]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Hefeweizen Hell / Dunkel / Alkoholfrei <small class="allergen"> [A]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Cola-Weizen / Russen-Weizen <small class="allergen"> [A,1]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Desperados <small class="allergen"> [A]</small></span><span class="price">4,50 €</span></div>
+      <div class="item"><span>Becks alkoholfrei <small class="allergen"> [A]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Becks Lemon <small class="allergen"> [A,1]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Becks <small class="allergen"> [A]</small></span><span class="price">3,50 €</span></div>
     </div>
-    <div class="menu-card"><h3>🥤 Alkoholfrei</h3>
-      <div class="item"><span>Mineralwasser spritzig</span><span class="price">ab 2,50 €</span></div>
-      <div class="item"><span>Mineralwasser still</span><span class="price">ab 2,50 €</span></div>
-      <div class="item"><span>Coca-Cola 0,33 l</span><span class="price">3,50 €</span></div>
-      <div class="item"><span>Cola Light 0,33 l</span><span class="price">3,50 €</span></div>
-      <div class="item"><span>Cola Zero 0,33 l</span><span class="price">3,50 €</span></div>
-      <div class="item"><span>Spezi 0,33 l</span><span class="price">3,50 €</span></div>
-      <div class="item"><span>Zitronenlimonade</span><span class="price">ab 2,80 €</span></div>
-      <div class="item"><span>Apfel-Schorle</span><span class="price">ab 2,80 €</span></div>
-      <div class="item"><span>Orangen-/Apfelsaft</span><span class="price">ab 2,80 €</span></div>
-      <div class="item"><span>Red Bull Energy 0,25 l</span><span class="price">4,00 €</span></div>
+
+    <div class="menu-card"><h3>🥤 Alkoholfreie Getränke</h3>
+      <div class="item"><span>Mineralwasser spritzig 0,2 l</span><span class="price">2,50 €</span></div>
+      <div class="item"><span>Mineralwasser spritzig 0,4 l</span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Mineralwasser still 0,2 l</span><span class="price">2,50 €</span></div>
+      <div class="item"><span>Mineralwasser still 0,4 l</span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Coca-Cola 0,33 l <small class="allergen"> [1,9]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Coca-Cola Light 0,33 l <small class="allergen"> [1,9,11,12]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Coca-Cola Zero 0,33 l <small class="allergen"> [1,9,11,12]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Coca-Cola 0,4 l <small class="allergen"> [1,9]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Cola Light 0,4 l <small class="allergen"> [1,9,11,12]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Cola Zero 0,4 l <small class="allergen"> [1,9,11,12]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Spezi 0,4 l <small class="allergen"> [1,9]</small></span><span class="price">3,50 €</span></div>
+      <div class="item"><span>Zitronenlimonade 0,2 l <small class="allergen"> [1]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Zitronenlimonade 0,4 l <small class="allergen"> [1]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Apfel-Schorle 0,2 l</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Apfel-Schorle 0,4 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Tonic Water 0,4 l <small class="allergen"> [10]</small></span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Orangensaft 0,2 l</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Orangensaft 0,4 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Apfelsaft 0,4 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Maracujanektar 0,2 l</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Maracujanektar 0,4 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Saftschorle 0,2 l</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Saftschorle 0,4 l</span><span class="price">3,80 €</span></div>
+      <div class="item"><span>Red Bull Energy 0,25 l <small class="allergen"> [9,11]</small></span><span class="price">4,00 €</span></div>
     </div>
-    <div class="menu-card"><h3>🍹 Cocktails & Longdrinks</h3>
-      <div class="item"><span>Cocktails</span><span class="price">8,50 €</span></div>
+
+    <div class="menu-card"><h3>☕ Warme Getränke</h3>
+      <div class="item"><span>Tasse Kaffee <small class="allergen"> [9]</small></span><span class="price">3,00 €</span></div>
+      <div class="item"><span>Espresso <small class="allergen"> [9]</small></span><span class="price">2,00 €</span></div>
+      <div class="item"><span>Cappuccino <small class="allergen"> [9,G]</small></span><span class="price">3,50 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🍷 Wein</h3>
+      <div class="item"><span>Müller-Thurgau 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Müller-Thurgau 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Frankenweißwein 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Frankenweißwein 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Merlot Trentino 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Merlot Trentino 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Rotwein trocken 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Rotwein trocken 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Weinschorle 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Weinschorle 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">4,50 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🥂 Sekt & Champagner</h3>
+      <div class="item"><span>Fürst von Metternich 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">6,50 €</span></div>
+      <div class="item"><span>Scavi & Ray Prosecco 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">7,50 €</span></div>
+      <div class="item"><span>Scavi & Ray Prosecco 0,75 l <small class="allergen"> [O,5]</small></span><span class="price">25,00 €</span></div>
+      <div class="item"><span>Champagner 0,75 l (auf Anfrage) <small class="allergen"> [O,5]</small></span><span class="price">90,00 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🍸 Aperitif</h3>
+      <div class="item"><span>Aperol Spritz 0,2 l <small class="allergen"> [1,O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Aperol Spritz 0,4 l <small class="allergen"> [1,O,5]</small></span><span class="price">6,00 €</span></div>
+      <div class="item"><span>Campari Spritz 0,2 l <small class="allergen"> [1,O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Campari Spritz 0,4 l <small class="allergen"> [1,O,5]</small></span><span class="price">7,00 €</span></div>
+      <div class="item"><span>Sarti Spritz 0,2 l <small class="allergen"> [1,O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Sarti Spritz 0,4 l <small class="allergen"> [1,O,5]</small></span><span class="price">6,00 €</span></div>
+      <div class="item"><span>Martini Bianco 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Martini Bianco 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">5,50 €</span></div>
+      <div class="item"><span>Martini Rosso 0,2 l <small class="allergen"> [O,5]</small></span><span class="price">5,00 €</span></div>
+      <div class="item"><span>Martini Rosso 0,4 l <small class="allergen"> [O,5]</small></span><span class="price">5,50 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🥃 Whisky</h3>
+      <div class="item"><span>Jack Daniel's</span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Chivas</span><span class="price">4,50 €</span></div>
+      <div class="item"><span>Johnnie Walker Red Label</span><span class="price">4,50 €</span></div>
+      <div class="item"><span>Jim Beam</span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Hennessy Whiskey</span><span class="price">4,50 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🍹 Rum</h3>
+      <div class="item"><span>Bacardi</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Havana Club</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Captain Morgan</span><span class="price">3,00 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🥃 Wodka / Klare</h3>
+      <div class="item"><span>Absolut</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>José Cuervo Tequila Silver</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>José Cuervo Tequila Gold</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Gordon's Dry Gin</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Ouzo 12</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Williams Christ Birne</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Alte Marille</span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Alte Willi</span><span class="price">4,00 €</span></div>
+      <div class="item"><span>Sambuca</span><span class="price">3,00 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🥃 Weinbrand, Liköre & Digestifs</h3>
+      <div class="item"><span>Asbach Uralt</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Chantré</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Amaretto</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Baileys <small class="allergen"> [G]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Cocos Feigling</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Jägermeister</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Ramazzotti</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Ficken</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Haselnuss <small class="allergen"> [H]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Mexikaner <small class="allergen"> [L,M]</small></span><span class="price">2,50 €</span></div>
+    </div>
+
+    <div class="menu-card"><h3>🍹 Longdrinks</h3>
       <div class="item"><span>Longdrinks</span><span class="price">7,50 €</span></div>
-      <div class="item"><span>Longdrinks mit Energy</span><span class="price">8,50 €</span></div>
-      <div class="item"><span>Aperol Spritz 0,4 l</span><span class="price">6,00 €</span></div>
-      <div class="item"><span>Campari Spritz</span><span class="price">7,00 €</span></div>
-    </div>
-    <div class="menu-card"><h3>🍷 Wein & Spirituosen</h3>
-      <div class="item"><span>Weinschorle 0,2 l</span><span class="price">4,00 €</span></div>
-      <div class="item"><span>Weinschorle 0,4 l</span><span class="price">4,50 €</span></div>
-      <div class="item"><span>Havanna Club 2 cl</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Bacardi 2 cl</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Wodka / Klare 2 cl</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Asbach Uralt 2 cl</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Chantré 2 cl</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Jack Daniel's / Jim Beam 2 cl</span><span class="price">4,00 €</span></div>
-      <div class="item"><span>Johnnie Walker Red Label 2 cl</span><span class="price">4,50 €</span></div>
+      <div class="item"><span>Longdrinks mit Energy <small class="allergen"> [9]</small></span><span class="price">8,50 €</span></div>
+      <div class="item"><span>Gespritzter Schnaps</span><span class="price">+0,50 €</span></div>
     </div>
   </div>
 </section>
@@ -143,7 +240,7 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
   <div class="kicker">Einblicke</div>
   <h2 class="title">Einfach So</h2>
   <div class="gallery">
-    <img src="assets/bar-flyer.png" alt="Einfach So Pilsbar – Werbemotiv">
+    <img src="assets/branding-poster.png" alt="Einfach So Pilsbar Nürnberg – Branding">
     <img src="assets/getraenkekarte.png" alt="Getränkekarte der Einfach So Pilsbar">
   </div>
 </section>
