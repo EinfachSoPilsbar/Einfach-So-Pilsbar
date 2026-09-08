@@ -16,13 +16,13 @@ nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(5,5,9,.84);ba
 .logo{font-family:"Caveat",cursive;font-size:29px;font-weight:700;color:var(--yellow);text-shadow:0 0 14px rgba(255,194,26,.6)}
 .logo span{color:var(--pink)}
 .links{display:flex;gap:22px;font-weight:800;font-size:14px}.links a:hover{color:var(--cyan);text-shadow:0 0 12px rgba(0,217,255,.7)}
-.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:105px 20px 60px;position:relative;overflow:hidden;background:linear-gradient(rgba(0,0,0,.34),rgba(5,5,9,.94)),url("branding-poster.png") center 20%/cover}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:105px 20px 60px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 28%,rgba(255,21,151,.12),transparent 32%),radial-gradient(circle at 50% 65%,rgba(0,217,255,.08),transparent 38%),var(--bg)}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,transparent 0 30%,rgba(5,5,9,.62) 72%)}
 .hero-card{position:relative;z-index:1;max-width:850px}
-.hero-logo{width:min(420px,78vw);max-height:430px;object-fit:contain;filter:drop-shadow(0 0 24px rgba(255,21,151,.35));border-radius:50%}
+.hero-logo{width:min(300px,68vw);height:auto;object-fit:contain;filter:drop-shadow(0 0 26px rgba(255,21,151,.42)) drop-shadow(0 0 10px rgba(255,194,26,.25));border-radius:50%;margin:0 auto 10px;display:block}
 .kicker{color:var(--cyan);font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:14px;text-shadow:0 0 12px rgba(0,217,255,.65)}
-h1{font-family:Anton,sans-serif;font-size:clamp(42px,8vw,82px);letter-spacing:3px;line-height:.95;margin:15px 0 18px}
-.hero p{font-size:clamp(17px,2.4vw,23px);color:#eee;max-width:720px;margin:0 auto 28px;line-height:1.5}
+h1{font-family:Anton,sans-serif;font-size:clamp(34px,6vw,64px);letter-spacing:2px;line-height:.95;margin:10px 0 18px}
+.hero p{font-size:clamp(17px,2.4vw,22px);color:#eee;max-width:720px;margin:8px auto 28px;line-height:1.5}
 .btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
 .btn{padding:14px 21px;border-radius:999px;font-weight:900;border:1px solid var(--pink);background:#11111a;box-shadow:0 0 16px rgba(255,21,151,.12)}
 .btn.primary{background:var(--pink);border-color:var(--pink);color:#fff;box-shadow:0 0 24px rgba(255,21,151,.5)}
@@ -41,7 +41,7 @@ section{max-width:1200px;margin:auto;padding:85px 20px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px;border:1px solid var(--line);display:block}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact a{color:var(--cyan);font-weight:900}
 footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;color:var(--muted)}
-@media(max-width:800px){.links{display:none}.grid,.menu-wrap,.gallery,.contact{grid-template-columns:1fr}.hero{min-height:92vh;background-position:center top}.hero-logo{width:min(350px,82vw)}}
+@media(max-width:800px){.links{display:none}.grid,.menu-wrap,.gallery,.contact{grid-template-columns:1fr}.hero{min-height:92vh;background-position:center 68%}.hero-logo{width:min(285px,72vw)}}
 
 .menu-legend{margin:22px 0 8px;padding:16px 18px;border:1px solid rgba(0,217,255,.28);border-radius:16px;background:rgba(0,217,255,.05);color:#d9d9e2;font-size:12px;line-height:1.65}
 .menu-legend strong{color:var(--cyan)} .menu-legend small{color:#9999a8}
@@ -55,9 +55,8 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
 
 <header class="hero">
   <div class="hero-card">
-    <img class="hero-logo" src="logo.png" alt="Einfach So Pilsbar Nürnberg">
+    <img class="hero-logo" src="assets/logo-round.png" alt="Einfach So Pilsbar Nürnberg">
     <div class="kicker">Nürnberg · Wodanstraße 26</div>
-    <h1>Einfach <em>So</em><br>PILSBAR</h1>
     <p>Gute Getränke. Gute Musik. Gute Zeit. Einfach vorbeikommen, Platz nehmen und den Abend genießen.</p>
     <div class="btns">
       <a class="btn primary" href="#drinks">Getränkekarte</a>
@@ -92,7 +91,7 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
 <section id="drinks">
   <div class="kicker">Gute Getränke</div>
   <h2 class="title">Unsere Getränkekarte</h2>
-  <p class="sub">Eine Auswahl unserer aktuellen Getränke. Preise können sich bei Tages- oder Aktionsangeboten ändern.</p>
+  <p class="sub">Unsere digitale Getränkekarte mit den aktuell eingetragenen Preisen. Bei Tages- oder Aktionsangeboten können Preise abweichen.</p>
   <div class="menu-legend">
     <strong>Zusatzstoffe:</strong> 1 Farbstoff · 2 Konservierungsstoff · 3 Antioxidationsmittel ·
     4 Geschmacksverstärker · 5 Schwefeldioxid/Sulfite · 6 geschwärzt · 7 Phosphat ·
@@ -190,40 +189,40 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
     </div>
 
     <div class="menu-card"><h3>🥃 Whisky</h3>
-      <div class="item"><span>Jack Daniel's</span><span class="price">4,00 €</span></div>
-      <div class="item"><span>Chivas</span><span class="price">4,50 €</span></div>
-      <div class="item"><span>Johnnie Walker Red Label</span><span class="price">4,50 €</span></div>
-      <div class="item"><span>Jim Beam</span><span class="price">4,00 €</span></div>
-      <div class="item"><span>Hennessy Whiskey</span><span class="price">4,50 €</span></div>
+      <div class="item"><span >Jack Daniel's 2 cl <small class="allergen">[—]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span >Chivas 2 cl <small class="allergen">[—]</small></span><span class="price">4,50 €</span></div>
+      <div class="item"><span >Johnnie Walker Red Label 2 cl <small class="allergen">[—]</small></span><span class="price">4,50 €</span></div>
+      <div class="item"><span >Jim Beam 2 cl <small class="allergen">[—]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span >Hennessy Whiskey 2 cl <small class="allergen">[—]</small></span><span class="price">4,50 €</span></div>
     </div>
 
     <div class="menu-card"><h3>🍹 Rum</h3>
-      <div class="item"><span>Bacardi</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Havana Club</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Captain Morgan</span><span class="price">3,00 €</span></div>
+      <div class="item"><span >Bacardi 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Havana Club 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Captain Morgan 2 cl <small class="allergen">[—]</small></span><span class="price">3,00 €</span></div>
     </div>
 
     <div class="menu-card"><h3>🥃 Wodka / Klare</h3>
-      <div class="item"><span>Absolut</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>José Cuervo Tequila Silver</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>José Cuervo Tequila Gold</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Gordon's Dry Gin</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Ouzo 12</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Williams Christ Birne</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Alte Marille</span><span class="price">4,00 €</span></div>
-      <div class="item"><span>Alte Willi</span><span class="price">4,00 €</span></div>
-      <div class="item"><span>Sambuca</span><span class="price">3,00 €</span></div>
+      <div class="item"><span >Absolut 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >José Cuervo Tequila Silver 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >José Cuervo Tequila Gold 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Gordon's Dry Gin 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Ouzo 12 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Williams Christ Birne 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Alte Marille 2 cl <small class="allergen">[—]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span >Alte Willi 2 cl <small class="allergen">[—]</small></span><span class="price">4,00 €</span></div>
+      <div class="item"><span >Sambuca 2 cl <small class="allergen">[—]</small></span><span class="price">3,00 €</span></div>
     </div>
 
     <div class="menu-card"><h3>🥃 Weinbrand, Liköre & Digestifs</h3>
-      <div class="item"><span>Asbach Uralt</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Chantré</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Amaretto</span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Asbach Uralt 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span >Chantré 2 cl <small class="allergen">[—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Amaretto 2 cl <small class="allergen"> [—]</small></span><span class="price">2,80 €</span></div>
       <div class="item"><span>Baileys <small class="allergen"> [G]</small></span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Cocos Feigling</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Jägermeister</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Ramazzotti</span><span class="price">2,80 €</span></div>
-      <div class="item"><span>Ficken</span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Cocos Feigling 2 cl <small class="allergen"> [—]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Jägermeister 2 cl <small class="allergen"> [3]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Ramazzotti 2 cl <small class="allergen"> [3]</small></span><span class="price">2,80 €</span></div>
+      <div class="item"><span>Ficken 2 cl <small class="allergen"> [3]</small></span><span class="price">2,80 €</span></div>
       <div class="item"><span>Haselnuss <small class="allergen"> [H]</small></span><span class="price">2,80 €</span></div>
       <div class="item"><span>Mexikaner <small class="allergen"> [L,M]</small></span><span class="price">2,50 €</span></div>
     </div>
@@ -240,8 +239,7 @@ footer{border-top:1px solid var(--line);padding:35px 20px;text-align:center;colo
   <div class="kicker">Einblicke</div>
   <h2 class="title">Einfach So</h2>
   <div class="gallery">
-    <img src="branding-poster.png" alt="Einfach So Pilsbar Nürnberg – Branding">
-    <img src="branding-poster.png" alt="Getränkekarte der Einfach So Pilsbar">
+    <img src="assets/branding-poster.png" alt="Einfach So Pilsbar Nürnberg – Branding und Informationen">
   </div>
 </section>
 
